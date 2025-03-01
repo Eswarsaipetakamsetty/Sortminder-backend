@@ -3359,3 +3359,1119 @@ You're accessing the development server over HTTPS, but it only supports HTTP.
 You're accessing the development server over HTTPS, but it only supports HTTP.
 You're accessing the development server over HTTPS, but it only supports HTTP.
 You're accessing the development server over HTTPS, but it only supports HTTP.
+Internal Server Error: /users/leaderboard/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\sql\compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+Internal Server Error: /discussionforum/messages/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\sql\compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+"GET /users/leaderboard/?page=1&ordering=-score HTTP/1.1" 500 240935
+"GET /discussionforum/messages/?page=1 HTTP/1.1" 500 240831
+Internal Server Error: /challenges/run_code/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connection.py", line 445, in request
+    self.endheaders()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connection.py", line 276, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001EF29BA2CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=2358): Max retries exceeded with url: /submissions/batch (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EF29BA2CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Eswarsai\Projects\Sortminder\Sortminder\challenges\views.py", line 131, in post
+    response = requests.post(JUDGE0_BATCH_SUBMISSION_URL, json={"submissions" : submissions}, headers=JUDGE0_HEADERS)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=2358): Max retries exceeded with url: /submissions/batch (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EF29BA2CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+"POST /challenges/run_code/ HTTP/1.1" 500 226663
+Internal Server Error: /challenges/run_code/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\urllib3\connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 1428, in getresponse
+    response.begin()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\http\client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Eswarsai\Projects\Sortminder\Sortminder\challenges\views.py", line 131, in post
+    response = requests.post(JUDGE0_BATCH_SUBMISSION_URL, json={"submissions" : submissions}, headers=JUDGE0_HEADERS)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+"POST /challenges/run_code/ HTTP/1.1" 500 231140
+Internal Server Error: /users/profile/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "aws-0-ap-south-1.pooler.supabase.com" (3.111.105.85), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-0-ap-south-1.pooler.supabase.com" (3.108.251.216), port 5432 failed: No route to host (0x00002751/10065)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\sql\compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "aws-0-ap-south-1.pooler.supabase.com" (3.111.105.85), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-0-ap-south-1.pooler.supabase.com" (3.108.251.216), port 5432 failed: No route to host (0x00002751/10065)
+	Is the server running on that host and accepting TCP/IP connections?
+
+"GET /users/profile/ HTTP/1.1" 500 243165
+Internal Server Error: /users/profile/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\sql\compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+"PUT /users/profile/ HTTP/1.1" 500 239982
+Internal Server Error: /users/profile/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\sql\compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+"PUT /users/profile/ HTTP/1.1" 500 240037
+Internal Server Error: /users/profile/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\sql\compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+"PUT /users/profile/ HTTP/1.1" 500 239982
+Internal Server Error: /users/profile/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\sql\compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: could not translate host name "aws-0-ap-south-1.pooler.supabase.com" to address: No such host is known. 
+
+"PUT /users/profile/ HTTP/1.1" 500 240037
+Internal Server Error: /users/profile/
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "aws-0-ap-south-1.pooler.supabase.com" (3.108.251.216), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\views.py", line 324, in perform_authentication
+    request.user
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 231, in user
+    self._authenticate()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework\request.py", line 384, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 51, in authenticate
+    return self.get_user(validated_token), validated_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\rest_framework_simplejwt\authentication.py", line 130, in get_user
+    user = self.user_model.objects.get(**{api_settings.USER_ID_FIELD: user_id})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\models\sql\compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 320, in cursor
+    return self._cursor()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 279, in ensure_connection
+    self.connect()
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\django\db\backends\postgresql\base.py", line 332, in get_new_connection
+    connection = self.Database.connect(**conn_params)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\swathipetakamsetty\.pyenv\pyenv-win\versions\3.12.8\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: connection to server at "aws-0-ap-south-1.pooler.supabase.com" (3.108.251.216), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+"GET /users/profile/ HTTP/1.1" 500 242695
