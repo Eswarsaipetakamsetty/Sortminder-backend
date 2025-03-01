@@ -1,0 +1,9 @@
+django
+djangorestframework
+djangorestframework-simplejwt
+requests
+django-filter
+django-cors-headers
+django-redis
+supabase
+psycopg2-binary
