@@ -29,7 +29,7 @@ DEBUG = True
 SUPABASE_URL = 'https://gtyjozzqkslmsutwzats.supabase.co'
 SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0eWpvenpxa3NsbXN1dHd6YXRzIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczMzM3NzU2OSwiZXhwIjoyMDQ4OTUzNTY5fQ.kZp5FRfet_frIvKyBPnxq6j56uv2cQiqCMTXPA4DcAg'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
